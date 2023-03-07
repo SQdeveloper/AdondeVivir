@@ -1,0 +1,406 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/************ Header **************/
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 0 40px;
+    height: 55px;
+    justify-content: space-between;
+    font-size: 17px;
+    position: relative;
+}
+
+header a {
+    color: black;
+}
+
+header nav ul, header > div {
+    display: flex;
+    align-items: center;
+}
+
+header .enlaces {
+    gap: 30px; 
+}
+
+header .left {
+    gap: 40px;
+    height: 100%;
+}
+
+header nav > ul {
+    gap: 20px;
+    height: 100%;
+}
+
+header .enlaces a:last-child {
+    background-color: rgb(248, 94, 33);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+header .enlaces a:first-child {
+    font-weight: bold;
+}
+
+header .options {
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    background-color: rgb(243, 242, 242);
+    padding: 30px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    justify-content: space-between;
+    transition: opacity .6s;
+    visibility: hidden;
+}
+
+header .options > div, header .options ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+header .options h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+header .options li {
+    margin-bottom: 10px;
+}
+
+header .item:hover ~ .options {
+    opacity: 1;
+    visibility: visible;
+}
+
+header nav, header .item {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+header nav > ul > li {
+    height: 100%;;
+}
+
+header nav ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .options:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+header .toggle, header .close {
+    width: 30px;
+    display: none;
+}
+
+header .close img {
+    width: 30px;
+}
+
+/************** Menu ******************/
+.menu {
+    gap: 20px;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    color: black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    position: fixed;
+    top: 55px;
+    left: 0;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.menu:target {
+    visibility: visible;
+}
+
+.menu, .menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul {
+    gap: 20px;
+}
+
+.menu a {
+    color: black;
+}
+
+.menu a:hover {
+    color:rgb(248, 94, 33);
+}
+
+.menu ul:last-child {
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+.menu ul:last-child li {
+    border-bottom   : 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.menu > a:first-child {
+    background-color: rgb(248, 94, 33);
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.menu > a:nth-child(5) {
+    border: 1px solid rgb(248, 94, 33);
+    background-color: white;
+    color:rgb(248, 94, 33);
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/******** First *********/
+.first {
+    width: 95%;
+    margin: 50px auto;
+}
+
+.first form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.first select, .first input , .first button {
+    flex: 1;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+.first select, .first input {
+    text-overflow: ellipsis;
+}
+
+.first button {
+    border:1px solid rgb(248, 94, 33);
+    background-color: transparent;
+}
+
+/******** Second ********/
+.second {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.second a {
+    color: black;
+}
+
+.second span {
+    margin-left: 8px;
+}
+
+.second hr {
+    border: 1px solid gray;
+    height: 100%;
+}
+
+.second button, .second select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+/********* Flex-box ***********/
+section.flex-box {
+    width: 95%;
+    margin: 25px auto;
+    margin-bottom: 60px;
+}
+
+section.flex-box .box {
+    display: flex;
+    color: black;
+    gap: 15px;
+    background-color: rgb(243, 241, 241);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+section.flex-box .box > img {
+    width: 350px;
+    object-fit: cover;
+}
+
+section.flex-box .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+section.flex-box .text > div {
+    display: flex;
+    gap: 20px;
+}
+
+section.flex-box .text > ul {
+    display: flex;
+    gap: 8px;
+}
+
+section.flex-box .foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid rgb(204, 201, 201);
+}
+
+section.flex-box .foot ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+section.flex-box .foot button {
+    background-color: rgb(248, 94, 33);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/********** Footer ************/
+footer {
+    width: 100%;
+    padding-top: 50px;
+    background-color: rebeccapurple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .flex-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 95%;
+}
+
+footer > a {
+    margin-left: 2.5%;
+}
+
+footer .box {
+    flex: 1;
+}
+
+footer .box h2 {
+    margin-bottom: 20px;
+}
+
+footer .box li {
+    margin-bottom: 10px;
+}
+
+footer .redes img {
+    filter: invert(100%);
+}
+
+footer .box h3 {
+    margin: 50px 0 30px;
+}
+
+footer .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer .foot {
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    padding: 15px 30px;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+footer .foot span {
+    margin-bottom: 15px;
+    display: block;
+}
+
+footer .foot ul {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 1000px) {
+    /******* Header *********/
+    header .toggle {
+        display: block;
+    }
+
+    header nav, header .enlaces {
+        display: none;
+    }
+}
