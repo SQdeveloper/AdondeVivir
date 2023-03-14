@@ -647,4 +647,132 @@ footer .foot ul {
     header nav, header .enlaces {
         display: none;
     }
+
+    /************** Bg ************/
+    .bg > div {
+        width: 90%;
+    }
+
+    /********** First ***********/
+    .first .train {
+        width: 90%;
+    }
+    
+    /********** Second *********/
+    .second .sliderMove {
+        width: calc(300% + 100%/3);
+    }
+    
+    /********** Third *********/
+    .third .sliderMove {
+        width: calc(300% + 100%/3);
+    }
+
+    /*********** Fourth ***********/
+    .fourth .box-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fourth .box .index {
+        width: 70px;
+    }
+
+    /*********** Footer ***************/
+     footer .flex-box {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    footer .box {
+        flex: none;
+        width: 250px;
+    }
+
+    footer .foot, footer .foot ul {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 850px) {
+
+    /********** Bg ************/
+    .bg form {
+        flex-direction: column;
+    }
+
+    .bg input {
+        flex: none;
+    }
+
+    .bg h1 {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .bg input, .bg select, .bg button {
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .bg > div {
+        width: 95%;
+    }
+}
+
+@media (max-width: 650px) {
+    /******** First ********/
+    .first .cont-box .box:first-child {
+        display: none;
+    }
+    
+    /******* Second *********/
+    .second .sliderMove {
+        width: 500%;
+    }
+    
+    /******* Third *********/
+    .third .sliderMove {
+        width: 500%;
+    }
+    
+    /*********** Fourth ***********/
+    .fourth .box .index {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    /*********** First ***********/
+    .first .cont-buttons {
+        justify-content: center;
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    /********** Bg **********/
+    .bg > div {
+        padding: 20px;
+    }
+
+    /********** Fourth *********/
+    .fourth {
+        padding: 40px 20px;
+    }
+
+    .fourth h2 {
+        text-align: center;
+    }
+
+    .fourth .box {
+        gap: 20px;
+    }
+    
+    .fourth .box .index {
+        width: 110px;
+        font-size: 30px;
+        height: 35px;
+    }
 }

@@ -256,6 +256,7 @@ body {
 
 .bg input {
     flex: 2;
+    text-overflow: ellipsis;
 }
 
 .bg button {
@@ -297,8 +298,9 @@ body {
     margin: 0 auto;
 }
 
-.second .flex-box {
-    display: flex;
+.second .flex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -323,8 +325,9 @@ body {
     background-color: rgb(238, 237, 237);
 }
 
-.third .flex-box {
-    display: flex;
+.third .flex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -443,6 +446,7 @@ footer .foot span {
 footer .foot ul {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1000px) {
@@ -453,5 +457,95 @@ footer .foot ul {
 
     header nav, header .enlaces {
         display: none;
+    }
+
+    /********* First ***********/
+    .first {
+        flex-direction: column;
+    }
+
+    /********** Second ***********/
+    .second .flex-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /******* Third ********/
+    .third .flex-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 60px;
+    }
+
+    /*********** Footer ***************/
+    footer .flex-box {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    footer .box {
+        flex: none;
+        width: 250px;
+    }
+
+    footer .foot, footer .foot ul {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 870px) {
+    /********** Bg ************/
+    .bg > div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    /********** Bg ************/
+    .bg form {
+        flex-direction: column;
+    }
+
+    .bg input {
+        flex: none;
+    }
+
+    .bg h1 {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .bg > div {
+        width: 95%;
+    }
+
+    /******** Second **********/
+    .second .flex-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .second .box {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    /********** Third **********/
+    .third {
+        text-align: center;
+    }
+    
+    .third .flex-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .third .box {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    /********** Fourth ***********/
+    .fourth > div {
+        width: 100%;
+        text-align: center;
     }
 }

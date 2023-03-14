@@ -281,6 +281,7 @@ section.flex-box .box {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 30px;
+    padding-right: 15px;
 }
 
 section.flex-box .box > img {
@@ -298,6 +299,7 @@ section.flex-box .text {
 section.flex-box .text > div {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 section.flex-box .text > ul {
@@ -401,6 +403,61 @@ footer .foot ul {
     }
 
     header nav, header .enlaces {
+        display: none;
+    }
+
+    /*********** First ************/
+    .first form {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .first select, .first input, .first button {
+        flex: none;
+    }
+
+    /********** Second **********/
+    .second a:first-child, .second a:nth-child(2), .second hr {
+        display: none;
+    }
+
+    /*********** Footer ***************/
+    footer .flex-box {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    footer .box {
+        flex: none;
+        width: 250px;
+    }
+
+    footer .foot, footer .foot ul {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 800px) {
+    section.flex-box .box {
+        flex-direction: column;
+    }
+
+    section.flex-box .box > img {
+        width: 100%;
+        height: 250px;
+    }
+
+    section.flex-box .box {
+        padding-right: 0;
+    }
+
+    section.flex-box .text {
+        padding: 10px 15px;
+    }
+
+    .second div {
         display: none;
     }
 }

@@ -23,3 +23,10 @@ buttons2[1].addEventListener("click",()=>{
 function moveSlider2() {
     sliderMove2.style.transform = `translateX(-${number2*10}%)`;
 }
+
+if(window.innerWidth <= 650) {
+    limitSup2 = 8;
+}
+else if(window.innerWidth <= 1000) {
+    limitSup2 = 7;
+}

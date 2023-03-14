@@ -45,6 +45,8 @@ header .ingresar {
 .content h1 {
     font-size: 42px;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .content h1 span {
@@ -58,6 +60,8 @@ header .ingresar {
 
 .content > span {
     margin-bottom: 40px;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .content .box {
@@ -157,5 +161,28 @@ footer .foot ul {
 
     header nav, header .enlaces {
         display: none;
+    }
+
+    /*********** Footer ***************/
+    footer .flex-box {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    footer .box {
+        flex: none;
+        width: 250px;
+    }
+
+    footer .foot, footer .foot ul {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .content > div {
+        flex-direction: column;
     }
 }
