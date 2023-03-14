@@ -1,0 +1,96 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/********** Content ************/
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    margin: 40px auto;
+}
+
+.content a:nth-child(2) {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content > p {
+    line-height: 25px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content input, .content button {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.content input {
+    border: 1px solid gray;
+    padding: 0 10px;
+}
+
+.content button {
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+
+.content .nth {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.content hr {
+    flex: 1;
+    height: 1px;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.content .redes {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .text {
+    background-color: rgb(223, 221, 221);
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.content .text a {
+    display: block;
+    margin: 0 auto;
+    color: orangered;
+    font-weight: bold;
+}
